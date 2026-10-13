@@ -55,6 +55,32 @@ export const artists: Artist[] = [
     palette: ["#cfcac0", "#161616"],
     links: [],
   },
+  {
+    // Test entry: details below are placeholders to be confirmed.
+    slug: "otap",
+    name: "otap",
+    type: "DJ",
+    genre: "TBC",
+    based: "TBC",
+    territories: "Worldwide",
+    agent: "aa-cr booking",
+    bio: ["otap is part of the aa-cr roster. Full biography coming soon."],
+    palette: ["#8e8b84", "#f3f2ee"],
+    links: [],
+  },
+  {
+    // Test entry: details below are placeholders to be confirmed.
+    slug: "mika-collage",
+    name: "mika.collage",
+    type: "DJ",
+    genre: "TBC",
+    based: "TBC",
+    territories: "Worldwide",
+    agent: "aa-cr booking",
+    bio: ["mika.collage is part of the aa-cr roster. Full biography coming soon."],
+    palette: ["#e4e1da", "#161616"],
+    links: [],
+  },
 ];
 
 export function getArtist(slug: string) {
