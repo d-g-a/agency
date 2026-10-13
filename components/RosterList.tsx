@@ -10,10 +10,9 @@ const labels: Record<"All" | ArtistType, string> = {
   DJ: "DJs",
   Live: "Live acts",
   Band: "Bands",
-  Collective: "Collectives",
 };
 
-const filters: ("All" | ArtistType)[] = ["All", "DJ", "Live", "Band", "Collective"];
+const filters: ("All" | ArtistType)[] = ["All", "DJ", "Live", "Band"];
 
 export function RosterList({ artists, showFilters = true }: { artists: Artist[]; showFilters?: boolean }) {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");

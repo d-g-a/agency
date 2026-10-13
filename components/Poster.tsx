@@ -15,7 +15,7 @@ export function Poster({ artist, index }: { artist: Artist; index?: number }) {
       {artist.image && <img src={artist.image} alt={artist.name} />}
       <div className="stamp">
         <span>{index !== undefined ? String(index + 1).padStart(2, "0") : "aa-cr"}</span>
-        <span>{artist.type}</span>
+        <span>{artist.format ? `${artist.type} ${artist.format}` : artist.type}</span>
       </div>
       {!artist.image && <div className="initials">{initials}</div>}
     </div>

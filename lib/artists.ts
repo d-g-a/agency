@@ -1,12 +1,14 @@
 // Placeholder roster. This file is the content contract the CMS will replace:
 // keep the shape, swap the source.
 
-export type ArtistType = "DJ" | "Live" | "Band" | "Collective";
+export type ArtistType = "DJ" | "Live" | "Band";
 
 export type Artist = {
   slug: string;
   name: string;
   type: ArtistType;
+  /** How the act is booked when it isn't a solo set, e.g. "b3b". */
+  format?: string;
   genre: string;
   based: string;
   territories: string;
@@ -39,7 +41,8 @@ export const artists: Artist[] = [
     // Test entry: details from public event listings, to be confirmed.
     slug: "lamovida",
     name: "LAMOVIDA",
-    type: "Collective",
+    type: "DJ",
+    format: "b3b",
     genre: "TBC",
     based: "Paris",
     territories: "Worldwide",
@@ -47,6 +50,7 @@ export const artists: Artist[] = [
     bio: [
       "LAMOVIDA is a Latin American collective based in Paris, founded by four friends from Colombia, Bolivia and Mexico.",
       "Its nights give visibility to Latin American talent in the Paris music scene.",
+      "Booked as a b3b set between its members.",
     ],
     palette: ["#cfcac0", "#161616"],
     links: [],

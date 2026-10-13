@@ -36,7 +36,7 @@ export default async function ArtistPage({ params }: Props) {
             {artist.bio.map((p, i) => <p key={i}>{p}</p>)}
           </div>
           <dl className="facts">
-            <div><dt className="label dim">Type</dt><dd>{artist.type}</dd></div>
+            <div><dt className="label dim">Type</dt><dd>{artist.format ? `${artist.type} — ${artist.format}` : artist.type}</dd></div>
             <div><dt className="label dim">Sound</dt><dd>{artist.genre}</dd></div>
             <div><dt className="label dim">Based</dt><dd>{artist.based}</dd></div>
             <div><dt className="label dim">Territories</dt><dd>{artist.territories}</dd></div>
