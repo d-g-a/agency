@@ -33,7 +33,7 @@ export const artists: Artist[] = [
       "Dieglitter is part of the aa-cr roster. Full biography coming soon.",
     ],
     palette: ["#1f1f1e", "#e9e7e1"],
-    links: [{ label: "Instagram", href: "#" }],
+    links: [{ label: "Instagram", href: "https://www.instagram.com/dieglitter/" }],
   },
   {
     slug: "vanta-mother",
