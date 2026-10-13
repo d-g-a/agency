@@ -14,7 +14,7 @@ npm run build
 - `app/roster/page.tsx` — full roster list with filters and cursor-follow previews
 - `app/roster/[slug]/page.tsx` — artist page (statically generated)
 - `app/about/page.tsx` — about / principles / contact
-- `lib/artists.ts` — placeholder roster data; this is the content shape the CMS will replace
+- `lib/artists.ts` — roster data; this is the content shape the CMS will replace
 - `app/globals.css` — design tokens (`--bg`, `--fg`, `--dim`, `--line`) and all styles
 
 Artists without an `image` get a plain placeholder in their `palette` tones; add a press photo URL and it is shown in greyscale.

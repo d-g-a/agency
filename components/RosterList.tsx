@@ -44,7 +44,7 @@ export function RosterList({ artists, showFilters = true }: { artists: Artist[];
     <>
       {showFilters && (
         <div className="filters">
-          {filters.map((f) => (
+          {filters.filter((f) => f === "All" || artists.some((a) => a.type === f)).map((f) => (
             <button key={f} aria-pressed={filter === f} onClick={() => setFilter(f)}>
               {labels[f]}
             </button>

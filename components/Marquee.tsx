@@ -1,6 +1,8 @@
 export function Marquee({ items }: { items: string[] }) {
-  // Duplicated once so the -50% translate loops seamlessly.
-  const row = [...items, ...items];
+  // Repeat so one half always spans the viewport, then duplicate that half
+  // so the -50% translate loops seamlessly.
+  const half = Array.from({ length: Math.max(1, Math.ceil(12 / items.length)) }, () => items).flat();
+  const row = [...half, ...half];
   return (
     <div className="marquee" aria-hidden>
       <div className="marquee-track">
