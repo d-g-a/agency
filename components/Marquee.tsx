@@ -5,7 +5,7 @@ export function Marquee({ items }: { items: string[] }) {
     <div className="marquee" aria-hidden>
       <div className="marquee-track">
         {row.map((t, i) => (
-          <span key={i}>{t} ✕</span>
+          <span key={i}>{t}</span>
         ))}
       </div>
     </div>

@@ -8,20 +8,19 @@ export default function Home() {
     <>
       <section className="hero">
         <div className="hero-meta label">
-          <span>Booking &amp; artist management</span>
-          <span className="dim">Est. 2026 — Worldwide</span>
-          <span>{String(artists.length).padStart(3, "0")} artists</span>
+          <span className="dim">Est. 2026</span>
+          <span className="dim">{artists.length} artists — Worldwide</span>
         </div>
         <h1 className="wordmark" aria-label="aa-cr">
-          AA<span className="slash">/</span>CR
+          aa-cr
         </h1>
         <div className="hero-tag">
           <span>
-            An act of <em>collective</em>
+            An act of collective recklessness.
             <br />
-            recklessness
+            <em>Booking and management for independent artists.</em>
           </span>
-          <Link href="/roster" className="btn">Enter the roster →</Link>
+          <Link href="/roster" className="btn">View roster →</Link>
         </div>
       </section>
 
@@ -29,18 +28,19 @@ export default function Home() {
 
       <section className="section">
         <div className="section-head label">
-          <span>[ 01 ] Manifesto</span>
-          <Link href="/about" className="dim">Read more →</Link>
+          <span>About</span>
+          <Link href="/about" className="dim">More</Link>
         </div>
         <p className="statement">
-          We don&apos;t <s>manage</s> careers. We <span className="hazard">detonate</span> them.
+          A small agency for artists who take risks.{" "}
+          <span className="muted">We build careers slowly, carefully, and on the artist&apos;s terms.</span>
         </p>
       </section>
 
       <section className="section">
         <div className="section-head label">
-          <span>[ 02 ] Roster</span>
-          <Link href="/roster" className="dim">Full roster →</Link>
+          <span>Roster</span>
+          <Link href="/roster" className="dim">All artists</Link>
         </div>
         <div className="grid">
           {artists.slice(0, 4).map((a, i) => (

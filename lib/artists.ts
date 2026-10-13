@@ -14,7 +14,7 @@ export type Artist = {
   bio: string[];
   /** Optional press photo. Without one, a generated poster is rendered. */
   image?: string;
-  /** Two colours used for the generated poster / duotone. */
+  /** Background and text colour for the placeholder poster. */
   palette: [string, string];
   links: { label: string; href: string }[];
 };
@@ -32,7 +32,7 @@ export const artists: Artist[] = [
       "Vanta Mother builds rooms out of feedback. Modular rigs, contact mics and a refusal to play the same set twice.",
       "Sets run long, loud and without a safety net.",
     ],
-    palette: ["#ff2e00", "#0a0a0a"],
+    palette: ["#d9d6cf", "#161616"],
     links: [
       { label: "Instagram", href: "#" },
       { label: "Bandcamp", href: "#" },
@@ -49,7 +49,7 @@ export const artists: Artist[] = [
     bio: [
       "Warehouse sermons at 150 bpm. Saint Concrete came up through the CDMX underground and never looked back.",
     ],
-    palette: ["#e8e4dc", "#1a1a1a"],
+    palette: ["#2a2a28", "#e9e7e1"],
     links: [
       { label: "Instagram", href: "#" },
       { label: "SoundCloud", href: "#" },
@@ -66,7 +66,7 @@ export const artists: Artist[] = [
     bio: [
       "Four people, two chords, zero apologies. Nil By Mouth play like the venue owes them money.",
     ],
-    palette: ["#c8ff00", "#0a0a0a"],
+    palette: ["#c9c4b8", "#161616"],
     links: [
       { label: "Instagram", href: "#" },
       { label: "Spotify", href: "#" },
@@ -83,7 +83,7 @@ export const artists: Artist[] = [
     bio: [
       "Broken rhythms, sharp edges. Loud Ghost dismantles the four-to-the-floor and rebuilds it sideways.",
     ],
-    palette: ["#7a5cff", "#0a0a0a"],
+    palette: ["#8e8b84", "#f3f2ee"],
     links: [{ label: "Instagram", href: "#" }],
   },
   {
@@ -97,7 +97,7 @@ export const artists: Artist[] = [
     bio: [
       "A duo with one drum machine, one synth and one shared grudge against polite music.",
     ],
-    palette: ["#ff0a78", "#0a0a0a"],
+    palette: ["#e4e1da", "#161616"],
     links: [{ label: "Bandcamp", href: "#" }],
   },
   {
@@ -109,7 +109,7 @@ export const artists: Artist[] = [
     territories: "Europe & LATAM",
     agent: "aa-cr booking",
     bio: ["Relentless percussion, filthy loops, no breakdowns longer than a breath."],
-    palette: ["#00e0ff", "#0a0a0a"],
+    palette: ["#3d3c39", "#e9e7e1"],
     links: [{ label: "Instagram", href: "#" }],
   },
   {
@@ -121,7 +121,7 @@ export const artists: Artist[] = [
     territories: "Worldwide",
     agent: "aa-cr booking",
     bio: ["Born in a rehearsal room with no windows. It shows."],
-    palette: ["#ffb800", "#0a0a0a"],
+    palette: ["#b5b0a5", "#161616"],
     links: [{ label: "Spotify", href: "#" }],
   },
 ];

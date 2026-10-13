@@ -19,11 +19,10 @@ export function RosterList({ artists, showFilters = true }: { artists: Artist[];
     let x = 0, y = 0, cx = 0, cy = 0, raf = 0;
     const move = (e: MouseEvent) => { x = e.clientX; y = e.clientY; };
     const loop = () => {
-      cx += (x - cx) * 0.18;
-      cy += (y - cy) * 0.18;
+      cx += (x - cx) * 0.12;
+      cy += (y - cy) * 0.12;
       if (preview.current) {
-        const rot = Math.max(-8, Math.min(8, (x - cx) * 0.08));
-        preview.current.style.transform = `translate(${cx + 24}px, ${cy - 120}px) rotate(${rot}deg)`;
+        preview.current.style.transform = `translate(${cx + 32}px, ${cy - 120}px)`;
       }
       raf = requestAnimationFrame(loop);
     };
@@ -40,7 +39,7 @@ export function RosterList({ artists, showFilters = true }: { artists: Artist[];
         <div className="filters">
           {filters.map((f) => (
             <button key={f} aria-pressed={filter === f} onClick={() => setFilter(f)}>
-              {f} {f === "All" ? `(${artists.length})` : `(${artists.filter((a) => a.type === f).length})`}
+              {f === "All" ? "All" : f === "Live" ? "Live acts" : f === "Band" ? "Bands" : "DJs"}
             </button>
           ))}
         </div>
@@ -49,9 +48,9 @@ export function RosterList({ artists, showFilters = true }: { artists: Artist[];
         {shown.map((a, i) => (
           <li key={a.slug}>
             <Link href={`/roster/${a.slug}`} onMouseEnter={() => setActive(i)}>
-              <span className="num">{String(i + 1).padStart(3, "0")}</span>
+              <span className="num">{String(i + 1).padStart(2, "0")}</span>
               <span className="name">{a.name}</span>
-              <span className="meta label">
+              <span className="meta">
                 <span>{a.genre}</span>
                 <span className="dim">{a.based}</span>
               </span>

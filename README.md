@@ -15,6 +15,6 @@ npm run build
 - `app/roster/[slug]/page.tsx` — artist page (statically generated)
 - `app/about/page.tsx` — about / principles / contact
 - `lib/artists.ts` — placeholder roster data; this is the content shape the CMS will replace
-- `app/globals.css` — design tokens (`--ink`, `--bone`, `--hazard`) and all styles
+- `app/globals.css` — design tokens (`--bg`, `--fg`, `--dim`, `--line`) and all styles
 
-Artists without an `image` get a generated poster from their `palette`; add a press photo URL and it is rendered duotone.
+Artists without an `image` get a plain placeholder in their `palette` tones; add a press photo URL and it is shown in greyscale.

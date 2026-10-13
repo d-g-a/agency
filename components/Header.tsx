@@ -19,7 +19,6 @@ export function Header() {
         new Date().toLocaleTimeString("en-GB", {
           hour: "2-digit",
           minute: "2-digit",
-          second: "2-digit",
         }),
       );
     tick();
@@ -30,7 +29,7 @@ export function Header() {
   return (
     <header className="header">
       <Link href="/" className="logo" aria-label="aa-cr home">
-        AA/CR
+        aa-cr
       </Link>
       <nav className="label">
         {links.map((l) => (
@@ -45,7 +44,7 @@ export function Header() {
         <a href="mailto:booking@aa-cr.com">Contact</a>
       </nav>
       <span className="label right clock" suppressHydrationWarning>
-        {time || "--:--:--"} LOCAL
+        {time || "--:--"}
       </span>
     </header>
   );

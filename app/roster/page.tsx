@@ -8,9 +8,9 @@ export default function RosterPage() {
   return (
     <>
       <h1 className="page-title">
-        Roster<sup>({String(artists.length).padStart(3, "0")})</sup>
+        Roster<sup>{artists.length}</sup>
       </h1>
-      <div style={{ height: "4vw" }} />
+      <div style={{ height: "48px" }} />
       <RosterList artists={artists} />
     </>
   );

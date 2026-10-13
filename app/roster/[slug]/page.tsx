@@ -29,7 +29,7 @@ export default async function ArtistPage({ params }: Props) {
         <div className="left">
           <div className="label" style={{ display: "flex", justifyContent: "space-between" }}>
             <Link href="/roster">← Roster</Link>
-            <span className="dim">{String(index + 1).padStart(3, "0")} / {String(artists.length).padStart(3, "0")}</span>
+            <span className="dim">{String(index + 1).padStart(2, "0")} / {String(artists.length).padStart(2, "0")}</span>
           </div>
           <h1 className="artist-name">{artist.name}</h1>
           <div className="bio">
@@ -62,7 +62,7 @@ export default async function ArtistPage({ params }: Props) {
 
       <Link href={`/roster/${next.slug}`} className="section" style={{ display: "block" }}>
         <span className="label dim">Next artist</span>
-        <p className="statement" style={{ maxWidth: "none" }}>{next.name} →</p>
+        <p className="statement" style={{ maxWidth: "none", marginTop: 12 }}>{next.name} →</p>
       </Link>
     </>
   );

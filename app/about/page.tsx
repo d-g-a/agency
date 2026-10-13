@@ -12,15 +12,15 @@ const principles = [
 export default function AboutPage() {
   return (
     <>
-      <h1 className="page-title">About<sup>(aa-cr)</sup></h1>
+      <h1 className="page-title">About</h1>
 
       <section className="section">
         <div className="two-col">
-          <p className="label dim">[ 01 ] Who we are</p>
+          <p className="label dim">Who we are</p>
           <div className="lede">
             <p>
-              aa-cr — <span className="hazard">an act of collective recklessness</span> — is an independent
-              booking and artist agency for music that refuses to behave.
+              aa-cr — an act of collective recklessness — is an independent
+              booking and artist agency.
             </p>
             <p className="dim">
               We represent DJs, live acts and bands working at the loud, strange edges of club and
@@ -32,13 +32,13 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="section-head label">
-          <span>[ 02 ] Principles</span>
+          <span>Principles</span>
           <span className="dim">{String(principles.length).padStart(2, "0")}</span>
         </div>
         <ol className="principles">
           {principles.map((p, i) => (
             <li key={p.t}>
-              <span className="label hazard">{String(i + 1).padStart(2, "0")}</span>
+              <span className="label dim">{String(i + 1).padStart(2, "0")}</span>
               <h3>{p.t}</h3>
               <p>{p.d}</p>
             </li>
@@ -48,10 +48,10 @@ export default function AboutPage() {
 
       <section className="section">
         <div className="two-col">
-          <p className="label dim">[ 03 ] Contact</p>
+          <p className="label dim">Contact</p>
           <div className="lede">
-            <p>Bookings, demos, bad ideas:</p>
-            <p><a className="hazard" href="mailto:booking@aa-cr.com">booking@aa-cr.com</a></p>
+            <p>For bookings and enquiries:</p>
+            <p><a href="mailto:booking@aa-cr.com">booking@aa-cr.com</a></p>
           </div>
         </div>
       </section>
