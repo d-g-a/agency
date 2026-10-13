@@ -1,7 +1,7 @@
 // Placeholder roster. This file is the content contract the CMS will replace:
 // keep the shape, swap the source.
 
-export type ArtistType = "DJ" | "Live" | "Band";
+export type ArtistType = "DJ" | "Live" | "Band" | "Collective";
 
 export type Artist = {
   slug: string;
@@ -34,6 +34,22 @@ export const artists: Artist[] = [
     ],
     palette: ["#1f1f1e", "#e9e7e1"],
     links: [{ label: "Instagram", href: "https://www.instagram.com/dieglitter/" }],
+  },
+  {
+    // Test entry: details from public event listings, to be confirmed.
+    slug: "lamovida",
+    name: "LAMOVIDA",
+    type: "Collective",
+    genre: "TBC",
+    based: "Paris",
+    territories: "Worldwide",
+    agent: "aa-cr booking",
+    bio: [
+      "LAMOVIDA is a Latin American collective based in Paris, founded by four friends from Colombia, Bolivia and Mexico.",
+      "Its nights give visibility to Latin American talent in the Paris music scene.",
+    ],
+    palette: ["#cfcac0", "#161616"],
+    links: [],
   },
   {
     slug: "vanta-mother",

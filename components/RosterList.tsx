@@ -5,7 +5,15 @@ import { useEffect, useRef, useState } from "react";
 import type { Artist, ArtistType } from "@/lib/artists";
 import { Poster } from "./Poster";
 
-const filters: ("All" | ArtistType)[] = ["All", "DJ", "Live", "Band"];
+const labels: Record<"All" | ArtistType, string> = {
+  All: "All",
+  DJ: "DJs",
+  Live: "Live acts",
+  Band: "Bands",
+  Collective: "Collectives",
+};
+
+const filters: ("All" | ArtistType)[] = ["All", "DJ", "Live", "Band", "Collective"];
 
 export function RosterList({ artists, showFilters = true }: { artists: Artist[]; showFilters?: boolean }) {
   const [filter, setFilter] = useState<(typeof filters)[number]>("All");
@@ -39,7 +47,7 @@ export function RosterList({ artists, showFilters = true }: { artists: Artist[];
         <div className="filters">
           {filters.map((f) => (
             <button key={f} aria-pressed={filter === f} onClick={() => setFilter(f)}>
-              {f === "All" ? "All" : f === "Live" ? "Live acts" : f === "Band" ? "Bands" : "DJs"}
+              {labels[f]}
             </button>
           ))}
         </div>
