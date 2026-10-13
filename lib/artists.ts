@@ -21,6 +21,21 @@ export type Artist = {
 
 export const artists: Artist[] = [
   {
+    // Test entry: details below are placeholders to be confirmed.
+    slug: "dieglitter",
+    name: "Dieglitter",
+    type: "DJ",
+    genre: "Electronic",
+    based: "TBC",
+    territories: "Worldwide",
+    agent: "aa-cr booking",
+    bio: [
+      "Dieglitter is part of the aa-cr roster. Full biography coming soon.",
+    ],
+    palette: ["#1f1f1e", "#e9e7e1"],
+    links: [{ label: "Instagram", href: "#" }],
+  },
+  {
     slug: "vanta-mother",
     name: "Vanta Mother",
     type: "Live",
